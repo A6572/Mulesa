@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maseno University Students Association</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+      <img src="logo.png">
+    </header>
+    <button class="collapsible">Menu +</button>
+    <div class="content">
+  
+  <ul type="dot">
+    <li><a href="index.html">Home</a></li>
+      <li><a href="Events.html">Events</a></li>
+      <li><a href="Notices.html">Notices</a></li>
+      <li><a href="Verification.html">Members</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+     <li><a href="Registration.html">Registration</a></li>
+        <li><a href="wall_of_fame.html">Wall of fame</a></li>
+      <li><a href="Inventory.html">Our Inventory</a></li>
+      <li><a href="Partners.html">Business partners</a></li>
+      <li><a href="Tenders.html">Open Tender Supplies</a></li>
+        <li><a href="#contact">Our Contacts</a></li>
+      <li align="center"><hr>Downloads
+          <li><a href="/QryManualVoterRegister.pdf">Voters</a></li>
+       <li><a href="#members">Candidates</a></li>
+         <li><a href="https://online.fliphtml5.com/wvfzq/igrr/">Constitution</a></li>
+  </ul>
+  
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <h2 align="center">REGISTERED MEMBERS LIST 2023</h2>
+     <table border="1">
+       <tr>
+         <th>REGISTRATION</th>
+         <th>CATEGORY</th>
+         <th>CONTACT</th>
+       </tr>
+       <tr>
+         <td>MLSA/00001</td>
+         <td>Member</td>
+         <td>071234****</td>
+       </tr>
+       <tr>
+         <td>MLSA/00002</td>
+         <td>Member</td>
+         <td>071234****</td>
+       </tr>
+       <tr>
+         <td>MLSA/00003</td>
+         <td>Member</td>
+         <td>071234****</td>
+       </tr>
+        <tr>
+          <td>MLSA/00004</td>
+          <td>Member</td>
+          <td>071234****</td>
+        </tr>
+     </table>
+     <br><hr>
+  <footer>
+    <p>&copy; 2023 Maseno University Lower Eastern Students Association. All rights reserved.</p>
+   This Page is Managed and powered by: <a href="https://dynamic-ganache-a37003.netlify.app/?fbclid=PAAaayyivG6vqXDBM4xdcZrGuaLPuLI7DGChUKl5NFwAVC4eZqWS8Z23JafQk">200labs</a>
+  </footer>
+</body>
+</html>

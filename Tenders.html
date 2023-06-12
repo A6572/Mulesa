@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maseno University Students Association</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    th {
+      background-color: #343a40;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <body>
+    <header>
+      <img src="logo.png">
+    </header>
+    <button class="collapsible">Menu +</button>
+    <div class="content">
+  
+      <ul type="dot">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Notices.html">Notices</a></li>
+        <li><a href="Verification.html">Members</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="wall_of_fame.html">Wall of fame</a></li>
+        <li><a href="Inventory.html">Our Inventory</a></li>
+        <li><a href="#contact">Our Contacts</a></li>
+        <li align="center">
+          <hr>Downloads
+        <li><a href="/QryManualVoterRegister.pdf">Voters</a></li>
+        <li><a href="#members">Candidates</a></li>
+        <li><a href="https://online.fliphtml5.com/wvfzq/igrr/">Constitution</a></li>
+      </ul>
+  
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  
+  <h1 align="center">VACANCIES AND TENDERS</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>TENDER</th>
+        <th>DESCRIPTION</th>
+        <th>CATEGORY</th>
+        <th>DATE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Election Chairperson</td>
+        <td>Applications for Chairperson of Electrol body 2023 (1).</td>
+        <td>Open</td>
+        <td>Deadline: 8/8/2023</td>
+      </tr>
+      <tr>
+        <td>Certificates</td>
+        <td>Supply of certificates of 2023 Elections (14).</td>
+        <td>Graphics Designer</td>
+        <td>0n: 20/9/2023</td>
+      </tr>
+      <tr>
+        <td>Election Clerks</td>
+        <td>Application for positions of election clerks (6).</td>
+        <td>Open</td>
+        <td>Deadline: 8/8/2023</td>
+      </tr>
+    </tbody>
+  </table>
+  <section id="contact" class="card">
+      <hr>
+      <h2>Contact Us for Application of Tenders</h2>
+      <p>Have any questions or suggestions?<br> Reach out to us:</p>
+      <p>Email: info@Mulestudentsassociation.com</p>
+      <p><a href="call:0712345678">☎️ 0712345678</a></p>
+    </section>
+  <footer>
+    <p>&copy; 2023 Maseno University Lower Eastern Students Association. All rights reserved.</p>
+   This Page is Managed and powered by: <a href="https://dynamic-ganache-a37003.netlify.app/?fbclid=PAAaayyivG6vqXDBM4xdcZrGuaLPuLI7DGChUKl5NFwAVC4eZqWS8Z23JafQk">200labs</a>
+  </footer>
+</body>
+</html>

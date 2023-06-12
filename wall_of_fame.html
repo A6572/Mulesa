@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maseno University Students Association</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <header>
+      <img src="logo.png">
+    </header>
+  <style>
+  body{
+    background: floralwhite;
+    font-family: serif;
+  }
+      .content {
+      display: none;
+      padding: 10px;
+      background-color: ghostwhite;
+      color:black;
+      font-size: 8px;
+      margin-bottom: 5px;
+    }
+ .collapsible {
+   cursor: pointer;
+   border: none;
+   background-color: antiquewhite;
+   padding: 10px;
+   width: 100%;
+   text-align: left;
+   outline: none;
+   font-weight: bold;
+   text-align: center;
+   color: blue;
+ }
+    .active {
+      background-color: green;
+      color:White;
+      font-size: 25px;
+    }
+    table{
+      width: 100%;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1 align="center">HOUSE HEROES RECOGNITION</h1>
+  <h4 align="center" color="red">Selected members worth Honor for Exemplary Contribution</h4><hr>
+  <button class="collapsible">HHR 2023/2024</button>
+   <div class="content">
+     <table border="1">
+       <tr>
+         <th>NAME</th>
+         <th>POSITION</th>
+         <th>RECOGNITION</th>
+       </tr>
+       <tr>
+         <td>___________</td>
+       </tr>
+       <tr>
+         <td>____________</td>
+       </tr>
+       <tr>
+         <td>_____________</td>
+       </tr>
+     </table></div>
+<button class="collapsible">HHR 2022/2023</button>
+<div class="content">
+ <table border="1">
+   <tr>
+     <th>NAME</th>
+     <th>POSITION</th>
+     <th>RECOGNITION</th>
+   </tr>
+   <tr>
+      <td>Fabian Moris</td>
+      <td>Chairperson</td>
+      <td>Activism</td>
+   </tr>
+     <tr>
+       <td>Mary Muthoka</td>
+       <td>Vice Chairperson</td>
+       <td>Charity event</td>
+     </tr>
+       <tr>
+         <td>Kitonga Joseph</td>
+         <td>Secretary General</td>
+         <td>Mobilisation</td>
+     </tr>
+     <tr>
+       <td>Honest Moses</td>
+       <td>Treasurer</td>
+       <td>Account</td>
+       
+     </tr>
+     <tr>
+       <td>Anthony Mutinda</td>
+       <td>Second Year Representative</td>
+       <td>Documentation</td>
+     </tr>
+     <tr>
+       <td>Peter John</td>
+       <td>Organising Secretary</td>
+       <td>Events</td>
+     </tr>
+     <tr>
+       <td>Samuel Maundu</td>
+       <td>Kitui Representative</td>
+       <td>Followers</td>
+     </tr>
+     <tr>
+       <tr>
+         <td>Daniel Makau</td>
+         <td>Makueni Representative</td>
+         <td>Bursaries</td>
+       </tr>
+       <td>Mutiso Kutesa</td>
+       <td>Machakos Representative</td>
+       <td>Entertainment</td>
+     </tr>
+     <tr>
+       <td>Vincent Ngati</td>
+       <td>Member</td>
+       <td>Peaceful Defeat</td>
+     </tr>
+      <tr>
+        <td>Muoki</td>
+        <td>Member</td>
+        <td>Loyalty</td>
+      </tr>
+      
+ </table>
+ </div>
+ <button class="collapsible">HHR 2021/2022</button>
+ <div class="content">
+   <table border="1">
+     <tr>
+       <th>NAME</th>
+       <th>POSITION</th>
+       <th>RECOGNITION</th>
+     </tr>
+     <tr>
+       <td>Amos</td>
+       <td>Chairperson</td>
+       <td>Elected</td>
+     </tr>
+     <tr>
+       <td>Charity Kaluki</td>
+       <td>Vice Chairperson</td>
+       <td>Leadership</td>
+     </tr>
+     <tr>
+       <td>Kaslim Musyoka</td>
+       <td>Secretary General</td>
+       <td>Leadership</td>
+     </tr>
+     <tr>
+       <td>Fabian Moris</td>
+       <td>Member</td>
+       <td>Elections Transparency</td>
+     </tr>
+   </table>
+   </div>
+   <div>
+  <button class="collapsible">HHR 2020/2021</button>
+   <div class="content">
+     <table border="1">
+       <tr>
+         <th>NAME</th>
+         <th>POSITION</th>
+         <th>RECOGNITION</th>
+       </tr>
+       <tr>
+         <td>___________</td>
+         <td>Chairperson</td>
+         <td>Elected</td>
+       </tr>
+       <tr>
+         <td>____________</td>
+         <td>Vice Chairperson</td>
+         <td>Elected</td>
+       </tr>
+       <tr>
+         <td>_____________</td>
+         <td>Secretary General</td>
+         <td>Elected</td>
+       </tr>
+     </table><div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+</body>
+
+</html>
