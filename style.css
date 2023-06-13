@@ -18,6 +18,10 @@ body {
       width: 100%;
       border-radius: 5%;
     }
+    .badge {
+      width: 25%;
+      border-radius: 5px;
+    }
        /* Popup styles */
        .popup {
          position: fixed;
@@ -122,11 +126,11 @@ body {
     }
     
     
-    .slider img {
-      position: absolute;
+    .aboutimage img {
       top: 0;
       left: 0;
       border-radius: 10px;
+      width: 100%;
 }
     
     ul {

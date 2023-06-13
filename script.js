@@ -13,25 +13,6 @@
         });
       }
       
-   //Image transition
-          var slideIndex = 0;
-          var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
-          var slideSpeed = 1500;
-          // Set the slider speed in milliseconds (e.g., 2000 = 2 seconds)
-          setInterval(function() {
-            for (var i = 0; i < slides.length; i++) {
-              slides[i].classList.remove("active", "next", "previous");
-              slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex >= slides.length) {
-              slideIndex = 0;
-            }
-            slides[slideIndex].classList.add("active");
-            slides[(slideIndex + 1) % slides.length].classList.add("next");
-            slides[(slideIndex - 1 + slides.length) % slides.length].classList.add("previous");
-            slides[slideIndex].style.display = "block";
-          }, slideSpeed);
         //
           function verifyPassword() {
             var password = parseInt(document.getElementById("password").value);
