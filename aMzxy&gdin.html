@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* CSS code for admin dashboard */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .admin-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .controls-container {
+      overflow-x: auto;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    .iframe-container {
+      flex-grow: 1;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .line {
+      height: 2px;
+      background-color: #333;
+      margin: 10px 0;
+    }
+
+    #admin-name {
+      color: #333;
+      font-weight: bold;
+    }
+
+    #date-time {
+      color: #777;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png">
+  </header>
+
+  <div class="admin-panel">
+    <div class="main-content">
+      <h1>Admin Dashboard</h1>
+      <div class="line"></div>
+      <p>
+        Welcome, <span id="admin-name"></span>!
+        <span id="date-time"></span>
+      </p>
+      <div class="controls-container">
+        <div class="controls">
+          <button class="btn" data-src="Inventory.html">Inventory</button>
+          <button class="btn" data-src="Members.html">Members</button>
+          <button class="btn" data-src="Registration.html">Registration</button>
+          <button class="btn" data-src="orders.html">Applications</button>
+          <button class="btn" data-src="settings.html">Settings</button>
+          <button class="btn" data-src="logout.html">Logout</button>
+        </div>
+      </div>
+      <div class="line"></div>
+
+      <div class="iframe-container">
+        <iframe id="content-iframe" src="Inventory.html"></iframe>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const iframe = document.querySelector("#content-iframe");
+    const btns = document.querySelectorAll(".btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const src = this.dataset.src;
+        iframe.src = src;
+      });
+    });
+
+    const adminName = prompt("Please enter your Administration Username:");
+    document.getElementById("admin-name").textContent = adminName;
+
+    function verifyPassword() {
+      const password = prompt("Welcome " + adminName + ". Please enter your password:");
+      const validPassword = "123"; // Change this to your desired password
+
+      if (password === validPassword) {
+        document.getElementById("admin-password").textContent = password;
+      } else {
+        alert("Access denied! Invalid password.");
+        window.location.href = "index.html"; // Redirect to the login page or any other URL
+      }
+    }
+
+    // Time
+    setInterval(function () {
+      const now = new Date();
+      const dateTimeString = now.toLocaleString();
+      document.getElementById("date-time").textContent = dateTimeString;
+    }, 1000);
+
+    verifyPassword(); // Call the password verification function
+  });
+</script>
+
+
+</body>
+</html>

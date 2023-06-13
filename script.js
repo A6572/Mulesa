@@ -40,7 +40,7 @@
             var errorElement = document.getElementById("error");
             
             if (password >= minRange && password <= maxRange) {
-              window.location.href = "Members.html"; 
+              window.location.href = "/MxyZs1psw.html"; 
             } else {
               errorElement.innerHTML = "Invalid Access Key. Please try again!";
             }
