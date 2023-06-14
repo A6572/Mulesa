@@ -17,7 +17,7 @@
     var countdownTimer = setInterval(countdown, 00);
     // Countdown timer logic
     function countdown() {
-      var eventDate = new Date("2025-07-20T00:00:00").getTime(); // Replace with your event date
+      var eventDate = new Date("2023-07-20T00:00:00").getTime(); // Replace with your event date
       var now = new Date().getTime();
       var distance = eventDate - now;
     
