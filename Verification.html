@@ -1,75 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registered Members</title>
-     <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding-top: 100px;
-      width: 100%;
-    }
-    a{
-      color: blueviolet;
-      position: relative;
-     margin-left: 80%;
-      
-    }
-    h2 {
-      color: #333;
-    }
-    
-    form {
-      margin-top: 20px;
-    }
-    
-    label {
-      font-size: 16px;
-    }
-    
-    input[type="number"] {
-      padding: 8px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      padding: 10px 20px;
-      margin-top: 5px;
-      font-size: 16px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    button:hover {
-      background-color: #45a049;
-    }
-    
-    .error {
-      color: red;
-      margin-top: 0px;
-    }
-  </style>
+  <title>Login Verification</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Verification.css">
 </head>
 <body>
   <div id="popup" class="popup">
-  <img src="Badge.jpg" class="badge">
+    <img src="Badge.jpg" class="badge">
     <h2>Login Authentication</h2>
-  <form> Default Passcode = "2023"<br>
-    <label for="password">Enter Access Passcode :</label>
-    <br>
-    <input type="number" id="password" name="password">
-    <br>
-    <button type="button" onclick="verifyPassword()">Submit</button> 
-    <br><a href="aMzxy&gdin.html">Admin</a>
-    <div id="error" class="error"></div>
-  </form>
+    <form>
+      <label id="passcodeLabel" for="password">Passcode:</label><br>
+      <input type="number" id="password" name="password"><br>
+      <button type="button" onclick="verifyPassword()">Submit</button><br>
+      <a href="aMzxy&gdin.html">Admin</a>
+      <div id="error" class="error"></div>
+    </form>
   </div>
-    <script src="script.js"></script>
+  <script>
+        //Login Verification html file
+    function generatePasscode() {
+      // Generate a random passcode between 1000 and 9999
+      var passcode = Math.floor(Math.random() * 9000) + 1000;
+
+      // Set the passcode as the text of the label
+      document.getElementById("passcodeLabel").textContent = "Passcode: " + passcode;
+      // Clear the input field
+      document.getElementById("password").value = "";
+      // Remove any existing error message
+      document.getElementById("error").innerHTML = "";
+    }
+
+    function verifyPassword() {
+      var enteredPasscode = parseInt(document.getElementById("password").value);
+      var displayedPasscode = parseInt(document.getElementById("passcodeLabel").textContent.split(": ")[1]);
+      var errorElement = document.getElementById("error");
+
+      if (enteredPasscode === displayedPasscode) {
+        window.location.href = "/MxyZs1psw.html";
+      } else {
+        errorElement.innerHTML = "Invalid Access Key. Please try again!";
+      }
+    }
+    // Generate the initial passcode
+    generatePasscode();
+    ''
+    
+  </script>
+  <script>
+    window.onload = generatePasscode;
+  </script>
+   <script src=""></script>
 </body>
 </html>

@@ -13,25 +13,11 @@
         });
       }
       
-        //
-          function verifyPassword() {
-            var password = parseInt(document.getElementById("password").value);
-            var minRange = 2022;
-            var maxRange = 2023; 
-            var errorElement = document.getElementById("error");
-            
-            if (password >= minRange && password <= maxRange) {
-              window.location.href = "/MxyZs1psw.html"; 
-            } else {
-              errorElement.innerHTML = "Invalid Access Key. Please try again!";
-            }
-          }
-    
-
+  //Popup Countdown on index file  
     var countdownTimer = setInterval(countdown, 00);
     // Countdown timer logic
     function countdown() {
-      var eventDate = new Date("2023-07-20T00:00:00").getTime(); // Replace with your event date
+      var eventDate = new Date("2025-07-20T00:00:00").getTime(); // Replace with your event date
       var now = new Date().getTime();
       var distance = eventDate - now;
     
@@ -50,8 +36,7 @@
         document.getElementById("countdown").innerHTML = "Welcome to our Website";
       }
     }
-    
-    // Close the popup
+  // Close the popup
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
