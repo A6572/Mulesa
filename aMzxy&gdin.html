@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Admin Dashboard</title>
- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="Verification.css">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Verification.css">
 </head>
+<script src="script.js"></script>
 <body>
   <header>
     <img src="logo.png">
@@ -16,29 +17,77 @@
       <h1>Administrator Dashboard</h1>
       <div class="line"></div>
       <p>
-        Hello, <span id="admin-name"></span>!
-        <span id="date-time"></span>
-        &nbsp;
-        Email: <span id="admin-name"></span> @mulesa.info </p>
+        Last Login: <span id="date-time"></span>&nbsp;
+      </p>
+      <script>
+        var cookies = document.cookie.split(";");
+        var usernameFound = false;
+
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          if (cookie.startsWith("username=")) {
+            usernameFound = true;
+            var username = cookie.substring("username=".length);
+            var userDetails = getUserDetails(username);
+            if (userDetails) {
+              document.write("<table><tr><td>Name:<br> " + userDetails.username + "</td></tr>");
+              document.write("<tr><td>Email: " + userDetails.email + "</td></tr>");
+              document.write("<tr><td>Phone Number:<br> " + userDetails.phoneNumber + "</td></tr></table>");
+            } else {
+              document.write("<p>User details not found.</p>");
+            }
+            break;
+          }
+        }
+
+        if (!usernameFound) {
+          var loginPageUrl = "login.html";
+          window.history.replaceState(null, null, loginPageUrl);
+          window.location.href = loginPageUrl;
+        }
+
+        function getUserDetails(username) {
+          for (var i = 0; i < users.length; i++) {
+            if (users[i].username === username) {
+              return users[i];
+            }
+          }
+          return null;
+        }
+
+        function logout() {
+          document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          var loginPageUrl = "login.html";
+          window.history.replaceState(null, null, loginPageUrl);
+          window.location.href = loginPageUrl;
+          document.getElementById("content-iframe").src = "";
+        }
+      </script>
       <div class="controls-container">
         <div class="controls">
-          <button class="btn" data-src="Inventory.html">Inventory</button>
-          <button class="btn" data-src="Members.html">Members</button>
-          <button class="btn" data-src="Registration.html">Registration</button>
-          <button class="btn" data-src="orders.html">Notices</button>
-           <button class="btn" data-src="orders.html">Events</button>
-            <button class="btn" data-src="orders.html">Applications</button>
-          <button class="btn" data-src="settings.html">Settings</button>
-           <button type="button" onclick="closePreviousPages()" class="btn">Logout</button>
+          <button class="btn" data-src="Inventory.html" onclick="loadPage(this)">Inventory</button>
+          <button class="btn" data-src="Members.html" onclick="loadPage(this)">Members</button>
+          <button class="btn" data-src="Registration.html" onclick="loadPage(this)">Registration</button>
+          <button class="btn" data-src="orders.html" onclick="loadPage(this)">Notices</button>
+          <button class="btn" data-src="orders.html" onclick="loadPage(this)">Events</button>
+          <button class="btn" data-src="orders.html" onclick="loadPage(this)">Applications</button>
+          <button class="btn" data-src="settings.html" onclick="loadPage(this)">Settings</button>
+          <button type="button" onclick="logout()" class="btn">Logout</button>
         </div>
       </div>
       <div class="line"></div>
 
       <div class="iframe-container">
-        <iframe id="content-iframe" src="Inventory.html"></iframe>
+        <iframe id="content-iframe" src=""></iframe>
       </div>
     </div>
   </div>
-   <script src="Verification.js"></script>
+
+  <script>
+    function loadPage(button) {
+      var src = button.getAttribute("data-src");
+      document.getElementById("content-iframe").src = src;
+    }
+  </script>
 </body>
 </html>

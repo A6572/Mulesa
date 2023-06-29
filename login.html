@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Verification</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Verification.css">
+</head>
+<body>
+  <div id="popup" class="popup">
+    <img src="Badge.jpg" class="badge">
+    <h2>Administrator Login</h2>
+    <form onsubmit="verifyCredentials(event)">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br>
+      <button type="submit">Submit</button><br>
+      <a href="index.html">Exit</a>
+      <div id="error" class="error"></div>
+    </form>
+  </div>
+  <script src="script.js"></script> <!-- Include the script file that contains the shared user array -->
+  <script>
+    function verifyCredentials(event) {
+      event.preventDefault();
+      var enteredUsername = document.getElementById("username").value;
+      var enteredPassword = document.getElementById("password").value;
+      var errorElement = document.getElementById("error");
+
+      for (var i = 0; i < users.length; i++) {
+        if (enteredUsername === users[i].username && enteredPassword === users[i].password) {
+          // Store username in a cookie
+          document.cookie = "username=" + enteredUsername;
+          window.location.href = "aMzxy&gdin.html";
+          return;
+        }
+      }
+
+      errorElement.innerHTML = "Invalid username or password. Please try again!";
+    }
+  </script>
+</body>
+</html>
