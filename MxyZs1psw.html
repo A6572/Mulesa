@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Dashboard</title>
+  <title>Self-service Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="Verification.css">
 </head>
@@ -60,12 +60,11 @@
       </script>
       <div class="controls-container">
         <div class="controls">
-          <button class="btn" onclick="loadPage('Inventory.html')">Inventory</button>
-          <button class="btn" onclick="loadPage('Members.html')">Members</button>
           <button class="btn" onclick="loadPage('Registration.html')">Registration</button>
-          <button class="btn" onclick="loadPage('orders.html')">Notices</button>
-          <button class="btn" onclick="loadPage('orders.html')">Events</button>
-          <button class="btn" onclick="loadPage('orders.html')">Applications</button>
+          <button class="btn" onclick="loadPage('tblMembers.html')">Members</button>
+          <button class="btn" onclick="loadPage('Inventory.html')">Inventory</button>
+          <button class="btn" onclick="loadPage('Notices.html')">Notices</button>
+          <button class="btn" onclick="loadPage('Tenders.html')">Tender</button>
           <button class="btn" onclick="loadPage('settings.html')">Settings</button>
           <button type="button" onclick="closePreviousPages()" class="btn">Logout</button>
         </div>
@@ -73,7 +72,7 @@
       <div class="line"></div>
 
       <div class="iframe-container">
-        <iframe id="content-iframe" src="Registration.html"></iframe>
+        <iframe id="content-iframe" src="Notices.html"></iframe>
       </div>
     </div>
   </div>
